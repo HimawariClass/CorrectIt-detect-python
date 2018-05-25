@@ -1,3 +1,3 @@
 #!/bin/bash
-
-docker run -it --rm -v $(pwd):/app namedpython/python-opencv-with-gui /bin/bash
+docker build -t crctit-detect .
+docker run -it --rm -v $(pwd):/app crctit-detect /bin/bash

@@ -4,7 +4,7 @@ import numpy as np
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 
-image = cv2.imread(f'{DIR}/image/paper01.jpg')
+image = cv2.imread(f'{DIR}/image/paper03.jpg')
 if image is None:
   print("File not found.")
   exit()
@@ -26,6 +26,6 @@ ret, thrshld_ex = cv2.threshold(extracted, 20, 255, cv2.THRESH_BINARY_INV)
 
 mask = np.zeros((width+2, height+2), np.uint8)
 mask[:] = 0
-
 cv2.floodFill(thrshld_ex, mask, (0, 0), (0, 0, 255))
+
 cv2.imwrite(f'{DIR}/image/out.png', thrshld_ex)
