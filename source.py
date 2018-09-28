@@ -4,7 +4,7 @@ import numpy as np
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 
-image = cv2.imread(f'{DIR}/image/paper03.jpg')
+ image = cv2.imread(f'{DIR}/image/paper03.jpg')
 if image is None:
   print("File not found.")
   exit()
