@@ -4,7 +4,7 @@ import numpy as np
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 
-image = cv2.imread(f'{DIR}/image/paper02.jpg')
+image = cv2.imread(f'{DIR}/image/paper03.jpg')
 if image is None:
   print("File not found.")
   exit()
@@ -46,7 +46,7 @@ write_out(thrshld_ex, 'thrshld')
 kernel = np.ones((3, 1), np.uint8)
 thrshld_ex = cv2.morphologyEx(thrshld_ex, cv2.MORPH_OPEN, kernel)
 
-im_cont, contours, hierarchy = cv2.findContours(thrshld_ex, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
+_, contours, _ = cv2.findContours(thrshld_ex, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
 inside_contours = extract_inside(contours, hierarchy, True)
 
