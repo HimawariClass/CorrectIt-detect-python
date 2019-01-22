@@ -1,5 +1,6 @@
 {
-  "python.linting.pylintEnabled": true,
+  "python.linting.pylintEnabled": false,
   "python.linting.enabled": true,
-  "python.pythonPath": "python3"
+  "python.pythonPath": "/Users/namedpython/.pyenv/shims/python",
+  "python.linting.flake8Enabled": true
 }
