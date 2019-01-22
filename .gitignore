@@ -106,3 +106,4 @@ venv.bak/
 images/out*
 
 .DS_Store
+.envrc
